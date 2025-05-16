@@ -1,0 +1,225 @@
+
+@import './fonts/fonts.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Outfit', sans-serif;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overscroll-behavior-y: auto;
+    min-height: 100vh;
+    height: auto;
+    letter-spacing: 0.025em;
+    background-color: #000; /* Ensure black background */
+  }
+  html {
+    height: auto;
+    min-height: 100%;
+    background-color: #000; /* Ensure black background */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-wider font-semibold;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  button {
+    @apply transition-all duration-300;
+  }
+}
+
+/* Improved scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-warcrow-background rounded;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-warcrow-gold rounded hover:bg-warcrow-gold/80 transition-colors;
+}
+
+/* iOS-specific optimizations */
+@supports (-webkit-touch-callout: none) {
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+/* Card and interactive element styles */
+.card, .dialog, .popover {
+  @apply shadow-custom transition-shadow duration-300;
+}
+
+.interactive-element {
+  @apply transition-all duration-300 hover:scale-105;
+}
+
+/* Remove hover effect for TableRow */
+.round-details-table tr:hover {
+  background-color: inherit !important;
+}
+
+/* Table cell improvements */
+.round-details-table td, .round-details-table th {
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* Table responsiveness */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+  }
+  
+  .round-details-table {
+    font-size: 0.9rem;
+  }
+  
+  .round-details-table th,
+  .round-details-table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+/* Modify the default TableRow hover behavior */
+[data-rk] .hover\:bg-muted\/50:hover {
+  background-color: inherit !important;
+}
+
+/* Fade animations */
+.fade-enter {
+  @apply opacity-0;
+}
+
+.fade-enter-active {
+  @apply opacity-100 transition-opacity duration-300;
+}
+
+.fade-exit {
+  @apply opacity-100;
+}
+
+.fade-exit-active {
+  @apply opacity-0 transition-opacity duration-300;
+}
+
+/* Fix for scroll containers in profile sections */
+.profile-scroll-container {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Improved text colors for better readability */
+.text-warcrow-text {
+  color: #d4d4d8 !important; /* Lighter gray for better visibility on dark backgrounds */
+}
+
+/* Make table text more readable */
+table td, 
+table th {
+  color: #e4e4e7 !important; /* Light gray for better contrast */
+}
+
+/* Improve form elements readability */
+input, textarea, select {
+  color: #f4f4f5 !important; /* Very light gray, almost white */
+}
+
+/* Fix TabsTrigger text colors */
+.TabsTrigger[data-state="active"] {
+  color: #fbbf24 !important; /* Gold color when active */
+}
+
+/* Language tab color fixes */
+[role="tab"] {
+  color: #e4e4e7 !important; /* Light gray for inactive tabs */
+}
+
+[role="tab"][data-state="active"] {
+  color: #ffd700 !important; /* Gold for active tabs */
+}
+
+/* Improve button text contrast - No blue text */
+button {
+  color: #f4f4f5 !important; /* Very light gray for button text */
+}
+
+/* Exception for buttons with gold background */
+.bg-warcrow-gold button,
+button.bg-warcrow-gold,
+button.text-black {
+  color: #000 !important; /* Black text for gold buttons */
+}
+
+/* Buttons with gold outlines should have gold text */
+button.border-warcrow-gold,
+button.border-warcrow-gold\/30,
+button.border-warcrow-gold\/50 {
+  color: #ffd700 !important; /* Gold text for gold-outlined buttons */
+}
+
+/* Optimize cards and tables to avoid dark blue text */
+.card, 
+.table-container {
+  color: #e4e4e7 !important;
+}
+
+/* Fix for admin navbar items to ensure gold text */
+.admin-nav button {
+  color: #ffd700 !important;
+}
+
+/* Ensure admin sidebar buttons have proper contrast */
+.admin-sidebar button {
+  color: #ffd700 !important;
+}
+
+/* Fix tabs trigger text colors consistently */
+.TabsList .TabsTrigger {
+  color: #e4e4e7 !important;
+}
+
+.TabsList .TabsTrigger[data-state="active"] {
+  color: #ffd700 !important;
+}

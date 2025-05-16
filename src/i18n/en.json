@@ -1,0 +1,23 @@
+
+{
+  "translation": {
+    "visibility": "Visibility",
+    "unitNowVisibleInBuilder": "Unit is now visible in army builder",
+    "unitNowHiddenFromBuilder": "Unit is now hidden from army builder",
+    "errorUpdatingUnit": "Error updating unit",
+    "showHiddenUnits": "Show hidden units",
+    "fontSymbolExplorer": "Font Symbol Explorer",
+    "fontSymbolExplorerDescription": "Explore the available symbols in the Warcrow font",
+    "points": "points",
+    "viewCard": "View Card",
+    "unitCard": "Unit Card",
+    "searchUnits": "Search Units",
+    "imageNotAvailable": "Image not available",
+    "tryAgainLater": "Please try again later",
+    "unitCardFor": "Detailed card for {unitName} unit",
+    "clearAllFilters": "Clear all filters",
+    "filterByCharacteristics": "Filter by Characteristics",
+    "filterByKeywords": "Filter by Keywords",
+    "noUnitsMatch": "No units match your filters"
+  }
+}

@@ -1,0 +1,262 @@
+
+import { Unit } from "../../../types/army";
+
+export const hegemonyCharacters: Unit[] = [
+  {
+    id: "aide",
+    name: "Aide",
+    faction: "hegemony-of-embersig",
+    pointsCost: 25,
+    availability: 1,
+    command: 1,
+    keywords: [
+      { name: "Aestari", description: "Aestari race" },
+      { name: "Character", description: "Character unit type" },
+      { name: "Elf", description: "Elf race" },
+      { name: "Fearless", description: "Has the Fearless ability" },
+      { name: "Spellcaster", description: "Can cast spells" },
+    ],
+    specialRules: ["Place (10)"],
+    highCommand: false,
+    imageUrl: "/art/card/aide_card.jpg"
+  },
+  {
+    id: "corporal",
+    name: "Corporal",
+    faction: "hegemony-of-embersig",
+    pointsCost: 15,
+    availability: 1,
+    command: 2,
+    keywords: [
+      { name: "Character", description: "Character unit type" },
+      { name: "Human", description: "Human race" },
+      { name: "Join (Human, Infantry)", description: "Can join Human Infantry units" },
+    ],
+    highCommand: false,
+    imageUrl: "/art/card/corporal_card.jpg"
+  },
+  {
+    id: "frostfire-herald",
+    name: "Frostfire Herald",
+    faction: "hegemony-of-embersig",
+    pointsCost: 25,
+    availability: 1,
+    command: 0,
+    keywords: [
+      { name: "Aestari", description: "Aestari race" },
+      { name: "Character", description: "Character unit type" },
+      { name: "Elf", description: "Elf race" },
+      { name: "Fearless", description: "Has the Fearless ability" },
+      { name: "Spellcaster", description: "Can cast spells" },
+    ],
+    specialRules: ["Slowed", "Impassable"],
+    highCommand: false,
+    imageUrl: "/art/card/frostfire_herald_card.jpg"
+  },
+  {
+    id: "gunnery-corporal",
+    name: "Gunnery Corporal",
+    faction: "hegemony-of-embersig",
+    pointsCost: 20,
+    availability: 1,
+    command: 1,
+    keywords: [
+      { name: "Character", description: "Character unit type" },
+      { name: "Human", description: "Human race" },
+      { name: "Join (Arquebusiers | Pioneers)", description: "Can join Arquebusiers or Pioneers units" },
+    ],
+    specialRules: ["Repeat a Die"],
+    highCommand: false,
+    imageUrl: "/art/card/gunnery_corporal_card.jpg"
+  },
+  {
+    id: "war-surgeon",
+    name: "War Surgeon",
+    faction: "hegemony-of-embersig",
+    pointsCost: 15,
+    availability: 1,
+    command: 0,
+    keywords: [
+      { name: "Character", description: "Character unit type" },
+      { name: "Human", description: "Human race" },
+      { name: "Join (Infantry)", description: "Can join Infantry units" },
+    ],
+    highCommand: false,
+    imageUrl: "/art/card/war_surgeon_card.jpg"
+  },
+  {
+    id: "lady-telia",
+    name: "Lady Télia",
+    faction: "hegemony-of-embersig",
+    pointsCost: 25,
+    availability: 1,
+    command: 2,
+    keywords: [
+      { name: "Character", description: "Character unit type" },
+      { name: "Human", description: "Human race" },
+      { name: "Elite", description: "Elite unit" },
+      { name: "Scout", description: "Has scouting abilities" },
+      { name: "Join (Arquebusiers | Pioneers)", description: "Can join Arquebusiers or Pioneers units" },
+    ],
+    specialRules: ["Frightened", "Aim", "Repeat a Die"],
+    highCommand: false,
+    imageUrl: "/art/card/lady_telia_card.jpg"
+  },
+  {
+    id: "marhael-the-refused",
+    name: "Marhael the Refused",
+    faction: "hegemony-of-embersig",
+    pointsCost: 35,
+    availability: 1,
+    command: 1,
+    keywords: [
+      { name: "Aestari", description: "Aestari race" },
+      { name: "Character", description: "Character unit type" },
+      { name: "Elf", description: "Elf race" },
+      { name: "Fearless", description: "Has the Fearless ability" },
+      { name: "Spellcaster", description: "Can cast spells" },
+    ],
+    specialRules: ["Place (11)"],
+    highCommand: false,
+    imageUrl: "/art/card/marhael_the_refused_card.jpg"
+  },
+  {
+    id: "nadezhda-lazard",
+    name: "Nadezhda Lazard, Champion of Embersig",
+    faction: "hegemony-of-embersig",
+    pointsCost: 30,
+    availability: 1,
+    command: 2,
+    keywords: [
+      { name: "Character", description: "Character unit type" },
+      { name: "Human", description: "Human race" },
+      { name: "Join (Infantry)", description: "Can join Infantry units" },
+    ],
+    specialRules: ["Disarmed", "Vulnerable"],
+    highCommand: false,
+    imageUrl: "/art/card/nadezhda_lazard_champion_of_embersig_card.jpg"
+  },
+  {
+    id: "nayra-caladren",
+    name: "Nayra Caladren",
+    faction: "hegemony-of-embersig",
+    pointsCost: 35,
+    availability: 1,
+    command: 0,
+    keywords: [
+      { name: "Aestari", description: "Aestari race" },
+      { name: "Character", description: "Character unit type" },
+      { name: "Colossal Company", description: "Part of Colossal Company" },
+      { name: "Elite", description: "Elite unit" },
+      { name: "Elf", description: "Elf race" },
+      { name: "Fearless", description: "Has the Fearless ability" },
+      { name: "Spellcaster", description: "Can cast spells" },
+    ],
+    specialRules: ["Disarmed", "Slowed", "Vulnerable"],
+    highCommand: false,
+    imageUrl: "/art/card/nayra_caladren_card.jpg"
+  },
+  {
+    id: "naergon-caladren",
+    name: "Naergon Caladren",
+    faction: "hegemony-of-embersig",
+    pointsCost: 15,
+    availability: 1,
+    command: 1,
+    keywords: [
+      { name: "Aestari", description: "Aestari race" },
+      { name: "Character", description: "Character unit type" },
+      { name: "Colossal Company", description: "Part of Colossal Company" },
+      { name: "Elf", description: "Elf race" },
+      { name: "Spellcaster", description: "Can cast spells" },
+    ],
+    specialRules: ["Place (5)", "Disarmed", "Displace (5)", "Frightened"],
+    highCommand: false,
+    imageUrl: "/art/card/naergon_caladren_card.jpg"
+  },
+  {
+    id: "trabor-slepmund",
+    name: "Trabor Slepmund",
+    faction: "hegemony-of-embersig",
+    pointsCost: 30,
+    availability: 1,
+    command: 1,
+    keywords: [
+      { name: "Character", description: "Character unit type" },
+      { name: "Colossal Company", description: "Part of Colossal Company" },
+      { name: "Dwarf", description: "Dwarf race" },
+      { name: "Ghent", description: "Ghent faction" },
+      { name: "Dispel", description: "Can dispel magic" },
+      { name: "Join (War Rig)", description: "Can join War Rig units" },
+    ],
+    specialRules: ["Disarmed"],
+    highCommand: false,
+    imageUrl: "/art/card/trabor_slepmund_card.jpg"
+  },
+  {
+    id: "mk-os-automata",
+    name: "MK-OS Automata",
+    faction: "hegemony-of-embersig",
+    pointsCost: 0,
+    availability: 3,
+    command: 0,
+    keywords: [],
+    specialRules: [],
+    highCommand: false,
+    imageUrl: "/art/card/mk-os_automata_card.jpg"
+  },
+  // New characters from the sheet
+  {
+    id: "gale-falchion",
+    name: "Gale Falchion",
+    faction: "hegemony-of-embersig",
+    pointsCost: 25,
+    availability: 1,
+    command: 0,
+    keywords: [
+      { name: "Aestari", description: "Aestari race" },
+      { name: "Character", description: "Character unit type" },
+      { name: "Elf", description: "Elf race" },
+      { name: "Spellcaster", description: "Can cast spells" },
+    ],
+    specialRules: [],
+    highCommand: false,
+    imageUrl: "/art/card/gale_falchion_card.jpg"
+  },
+  {
+    id: "engineer",
+    name: "Engineer",
+    faction: "hegemony-of-embersig",
+    pointsCost: 15,
+    availability: 1,
+    command: 0,
+    keywords: [
+      { name: "Character", description: "Character unit type" },
+      { name: "Ghent", description: "Ghent faction" },
+      { name: "Dwarf", description: "Dwarf race" },
+      { name: "Dispel (BLU)", description: "Can dispel magic with Blue dice" },
+      { name: "Join (Infantry | War Machine)", description: "Can join Infantry or War Machine units" },
+    ],
+    specialRules: [],
+    highCommand: false,
+    imageUrl: "/art/card/engineer_card.jpg"
+  },
+  {
+    id: "ansera-noighman",
+    name: "Ansera Noighman",
+    faction: "hegemony-of-embersig",
+    pointsCost: 20,
+    availability: 1,
+    command: 0,
+    keywords: [
+      { name: "Character", description: "Character unit type" },
+      { name: "Ghent", description: "Ghent faction" },
+      { name: "Dwarf", description: "Dwarf race" },
+      { name: "Dispel (BLU)", description: "Can dispel magic with Blue dice" },
+      { name: "Join (Infantry | War Machine)", description: "Can join Infantry or War Machine units" },
+    ],
+    specialRules: [],
+    highCommand: false,
+    imageUrl: "/art/card/ansera_noighman_card.jpg"
+  }
+];
